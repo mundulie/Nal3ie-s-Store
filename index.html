@@ -762,47 +762,42 @@ form button {
 
     </footer>
 <script>
-
-    const form =
+const form =
 document.getElemenById("shopForm")
 
-     form.addEventListener("submit", function(event) {
-        
-        event.preventDefault();
+form.addEventListener("submit",
+function(event) {
+    event.preventDefault();
 
-        const name =
+    const name =
 document.getElementById("customerName").value;
-
-        const item =
+    const item =
 document.getElementById("itemType").value;
-
-        const size =
+    const size =
 document.getElementById("size").value;
-
-        const budget =
+    const budget =
 document.getElementById("budget").value;
-
-        const description =
+    const description =
 document.getElementById("description").value;
 
-        const message = 
-              "Hello Nal3ie's store! i would like you to thrift for me.\n\n" +
-              "Name: " + name + "\n" +
-              "Item: " + item + "\n" +
-              "Size: " + size + "\n" +
-              "Budget: KSh " + budget + "\n" +
-              "Description: " + description + "\n"
+     const message = 
+         "Hello Nal3ie's store! i would like you to thrift for me.\n\n" +
+         "Name: " + name + "\n" +
+         "Item: " + item + "\n" +
+         "Size: " + size + "\n" +
+         "Budget: KSh " + budget + "\n" +
+         "Description: " + description + "\n"
 
-        const phoneNumber = 
-               "254742223393";
+     const phoneNumber = "254742223393";
 
-               const whatsappURL = 
-                     "https://wa.me/" + phoneNumber +
-                     "?text=" + encodeURIComponent(message);
+     const whatsappURL = 
+        "https://wa.me/" + phoneNumber +
+        "?text=" + 
+encodeURIComponent(message);
 
-                     windows.open(whatsappURL,"_blank");
+      windows.open(whatsappURL,"_blank");
          
-                    });
+});
 </script>
 </body>
 </html>
