@@ -527,7 +527,7 @@ form button {
 
         <form id="shopForm">
 
-            <label for="customerName">Your Name</label>
+            <label for="customersName">Your Name</label>
             <input type="text" id="customerName"
                    placeholder="Enter your name>
 
@@ -561,7 +561,16 @@ form button {
             
         </form>
 
-    </section>
+        <div id="thankYouMessage"
+        style="display:none; text-align:center;
+               background:#f5e6d3; color:#4b2e1f
+               padding:20px; margin:2opx;
+               border-radius:10px;">
+                  <h3>Thank You for Choosing Nal3ie's Store!</h3>
+                  <p>Yournthrift request is ready.Please send you message on whatsapp and we'll get back to you shortly</p>
+         </div>
+
+     </section>
 
      <section id="how">
         
@@ -763,21 +772,23 @@ form button {
     </footer>
 <script>
 const form =
-document.getElemenById("shopForm")
+document.getElementById("shopForm")
 
 form.addEventListener("submit",
 function(event) {
     event.preventDefault();
 
+document.getElementById("thankYouMessage").style.display = "block";   
+
     const name =
 document.getElementById("customerName").value;
-    const item =
+     const item =
 document.getElementById("itemType").value;
-    const size =
+     const size =
 document.getElementById("size").value;
-    const budget =
+     const budget =
 document.getElementById("budget").value;
-    const description =
+     const description =
 document.getElementById("description").value;
 
      const message = 
@@ -788,16 +799,16 @@ document.getElementById("description").value;
          "Budget: KSh " + budget + "\n" +
          "Description: " + description + "\n"
 
-     const phoneNumber = "254742223393";
+      const phoneNumber = "254742223393";
 
-     const whatsappURL = 
-        "https://wa.me/" + phoneNumber +
-        "?text=" + 
+       const whatsappURL = 
+           "https://wa.me/" + phoneNumber +
+           "?text=" +
 encodeURIComponent(message);
 
-      windows.open(whatsappURL,"_blank");
+       window.open(whatsappURL,"_blank");
          
-});
+       });
 </script>
 </body>
 </html>
